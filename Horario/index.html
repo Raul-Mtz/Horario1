@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+	
+		<meta charset = "Utf-8">
+
+		<script>
+
+			function clock(){
+
+				/*for(var i = 0; i<=108; i++){
+				
+					//document.getElementById("clock").innerHTML = i + " <br> <br> ";
+
+				}
+
+					var i = 0;
+					var f = i + 1; 
+					document.getElementById("clock").innerHTML = document.getElementById("clock").innerHTML+f+"<br><br>"; 
+				*/
+
+				var meses = [ "Enero" , "Ferbrero" , "Marzo" , "Abril" , "Mayo" , "Junio" , "Julio" , "Agosto" , "Septiembre" , "Octubre" , "Noviembre" , "Diciembre" ];
+
+				var dias = [ "Domingo" ,"Lunes" , "Martes" , "Miércoles" , "Jueves" , "Viernes" , "Sabado" ]
+
+				var lel = new Date();
+
+				var dia = dias[lel.getDay()];
+				var numerodia = lel.getDate();
+				var mes = meses[lel.getMonth()];
+				var año = lel.getFullYear() ;
+
+				/*document.getElementById("clock").innerHTML = (  "<h1>" + dias[lel.getDay()] + " " + lel.getDate() + " " + meses[lel.getMonth()] + " " + lel.getFullYear() + "</h1>" )*/
+				
+				document.getElementById("fecha").innerHTML = document.getElementById("fecha").innerHTML + dia + " " + numerodia + " de " + " " + mes + " " + " del " + año + "<br>";
+
+				var clasesLunes = [ "<br><br> Matemáticas <br>" , "Español <br>" , "Física" , "<br><br> RECREO <br><br>" , " PRE-PET" , "<br> Cívica y ética" , "<br>Historia" , "<br><br> RECREO <br><br>" , "Grammar <br>" ,  "Artísticas"];
+				
+				
+				var clasesMartes = [ "<br><br> Cívica y ética <br>" , "Oral Expression <br>" , "Tecnología" , "<br><br> RECREO <br><br>" , " PRE-PET" , "<br> Español" , "<br>Matemáticas" , "<br><br> RECREO <br><br>" , "Matemáticas <br>" ,  "Física <br>"];
+				
+				
+				var clasesMiercoles = ["<br><br> Educación Física <br>" , "Oral Expression <br>" , "Español" , "<br><br> RECREO <br><br>" , " Matemáticas" , "<br>Física" , "<br> Grammar" , "<br><br> RECREO <br><br>" , "Artísticas <br>" ,  "Historia"];
+				
+				
+				var clasesJueves = ["<br><br> Grammar <br>" , "Cívica y ética <br>" , "Español" , "<br><br> RECREO <br><br>" , "Oral Expression" , "<br> Matemáticas" , "<br>Historia" , "<br><br> RECREO <br><br>" , "Física <br>" ,  "Física"];
+				
+				
+				var clasesViernes = ["<br><br> Español <br>" , "Cívica y ética <br>" , "Orientación y Tutoría" , "<br><br> RECREO <br><br>" , " Tecnología" , "<br> Física" , "<br>Historia<br>" , "<br><br> RECREO <br><br>" , "Matemáticas <br>" ,  "PRE-PET"];
+
+			
+
+				 if (dia == dias[1]){
+
+					document.getElementById("fecha").innerHTML = document.getElementById("fecha").innerHTML + "Clases de hoy <br>";
+
+					for(var i = 0;i<clasesLunes.length;i++){
+
+						document.getElementById("clock").innerHTML = document.getElementById("clock").innerHTML + clasesLunes[i];
+
+					}
+
+				}
+
+				else if (dia == dias[2]){
+
+					document.getElementById("fecha").innerHTML = document.getElementById("fecha").innerHTML + "<br> Clases de hoy <br>";
+
+					for(var i = 0;i<clasesMartes.length;i++){
+
+						document.getElementById("clock").innerHTML = document.getElementById("clock").innerHTML + clasesMartes[i];
+
+					}
+
+				}
+
+				else if (dia == dias[3]){
+
+					document.getElementById("fecha").innerHTML = document.getElementById("fecha").innerHTML + "<br> Clases de hoy <br>";
+
+					for(var i = 0;i<clasesMiercoles.length;i++){
+
+						document.getElementById("clock").innerHTML = document.getElementById("clock").innerHTML + clasesMiercoles[i];
+
+					}
+
+				}
+
+				else if (dia = dias[4]){
+
+					document.getElementById("fecha").innerHTML = document.getElementById("fecha").innerHTML + "<br> Clases de hoy <br>";
+
+					for(var i = 0;i<clasesJuevew.length;i++){
+
+						document.getElementById("clock").innerHTML = document.getElementById("clock").innerHTML + clasesJueves[i];
+
+					}
+
+				}
+
+				else if (dia == dias[5]){
+
+					document.getElementById("fecha").innerHTML = document.getElementById("fecha").innerHTML + "<br> Clases de hoy <br>";
+
+					for(var i = 0;i<clasesMartes.length;i++){
+
+						document.getElementById("clock").innerHTML = document.getElementById("clock").innerHTML + clasesMartes[i];
+
+					}
+
+				}
+
+				else{
+
+					document.getElementById("clock").innerHTML = document.getElementById("clock").innerHTML + "¡Hoy no tienes clases!";
+
+				}
+
+			}
+
+		</script>
+
+		<title></title>
+	
+	</head>
+
+	<body onload = "clock()" style = "background-color:#000";>
+
+		<div id = "fecha" style="color:#fff;font-family:Arial; font-weight:bold; font-size:24px; text-align:center;"></div>
+		<div id="clock" style="color:#fff;font-family:Arial; font-size:23px; text-align:justify;"></div>
+
+	</body>
+
+</html>
